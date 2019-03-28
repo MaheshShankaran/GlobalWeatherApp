@@ -1,0 +1,5 @@
+C:\Users\shankarm\Downloads\GlobalWeatherApp\GlobalWeatherApp\WeatherReport.Entities\bin\Debug\WeatherReport.Entities.dll
+C:\Users\shankarm\Downloads\GlobalWeatherApp\GlobalWeatherApp\WeatherReport.Entities\bin\Debug\WeatherReport.Entities.pdb
+C:\Users\shankarm\Downloads\GlobalWeatherApp\GlobalWeatherApp\WeatherReport.Entities\obj\Debug\WeatherReport.Entities.csprojResolveAssemblyReference.cache
+C:\Users\shankarm\Downloads\GlobalWeatherApp\GlobalWeatherApp\WeatherReport.Entities\obj\Debug\WeatherReport.Entities.dll
+C:\Users\shankarm\Downloads\GlobalWeatherApp\GlobalWeatherApp\WeatherReport.Entities\obj\Debug\WeatherReport.Entities.pdb

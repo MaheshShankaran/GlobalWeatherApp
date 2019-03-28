@@ -1,0 +1,102 @@
+﻿<table>
+    <tr>
+        <td>
+            <div>
+                <img src="../../images/weather.png" style="align:center" />
+            </div>
+        </td>
+        <td style="width: 10%"></td>
+        <td>
+            <div>
+                <div *ngIf="isResultNull">
+                    <label style="color: red">{{displayMessage}}</label>
+                </div>
+
+                <div>
+                    <label>Enter a country name to fetch the list of cities: </label>
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="text" [(ngModel)]="selectedCountry" />
+                            </td>
+                            <td>
+                                <input type="button" value="Submit" (click)="getCities()" />
+                            </td>
+                            <td>
+                                <div *ngIf="previousCountrySelection !== null && previousCountrySelection !== '' ">
+                                    <b><label style="color: limegreen">Your latest weather report search country: {{previousCountrySelection}}</label></b>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div>&nbsp;</div>
+                <div>
+                    <div>
+                        <div><label>List of cities</label></div>
+                        <div>
+                            <select [(ngModel)]="selectedCity" name="selectedCity" id="selectedCity" (ngModelChange)="onCitySelectionChange($event)">
+                                <option *ngIf="selectedCity == null" value="null" disabled selected>Select from list</option>
+                                <option *ngFor="let c of citiesList" value="{{c.CityName}}">{{c.CityName}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div>&nbsp;</div>
+                <div *ngIf="isWeatherReportDisplay">
+                    <table>
+                        <tr>
+                            <td>
+                                <div><label>Location</label></div>
+                                <div><input type="text" [(ngModel)]="weatherData.WeatherReportLocation" disabled="disabled" /></div>
+                            </td>
+                            <td>
+                                <div><label>Time</label></div>
+                                <div><input type="text" [(ngModel)]="weatherData.WeatherReportTime" disabled="disabled" /></div>
+                            </td>
+                            <td>
+                                <div><label>Wind</label></div>
+                                <div><input type="text" [(ngModel)]="weatherData.Wind" disabled="disabled" /></div>
+                            </td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td>
+                                <div><label>Visibility</label></div>
+                                <div><input type="text" [(ngModel)]="weatherData.Visibility" disabled="disabled" /></div>
+                            </td>
+                            <td>
+                                <div><label>Sky Conditions</label></div>
+                                <div><input type="text" [(ngModel)]="weatherData.SkyConditions" disabled="disabled" /></div>
+                            </td>
+                            <td>
+                                <div><label>Temperature</label></div>
+                                <div><input type="text" [(ngModel)]="weatherData.Temperature" disabled="disabled" /></div>
+                            </td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td>
+                                <div><label>Dew Point</label></div>
+                                <div><input type="text" [(ngModel)]="weatherData.DewPoint" disabled="disabled" /></div>
+                            </td>
+                            <td>
+                                <div><label>Relative Humidity</label></div>
+                                <div><input type="text" [(ngModel)]="weatherData.RelativeHumidity" disabled="disabled" /></div>
+                            </td>
+                            <td>
+                                <div><label>Pressure</label></div>
+                                <div><input type="text" [(ngModel)]="weatherData.Pressure" disabled="disabled" /></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </td>
+    </tr>
+</table>
+
+
